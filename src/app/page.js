@@ -30,11 +30,11 @@ const Home = () => {
   const years = Array.from({ length: currentYear - 2014 }, (_, i) => currentYear - i);
 
   const uniqueMakes = Array.from(
-    new Map(makes.map(make => [make.VehicleTypeName, make])).values()
+    new Map(makes.map(make => [make.MakeName, make])).values()
   );
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-800 p-4">
       <h1 className="text-2xl font-bold mb-4">Car Dealer Filter</h1>
       <div className="w-full max-w-md bg-white shadow-md rounded-lg p-6">
         <div className="mb-4">
@@ -47,8 +47,8 @@ const Home = () => {
           >
             <option value="">Select a make</option>
             {uniqueMakes.map((make) => (
-              <option key={make.VehicleTypeId} value={make.VehicleTypeId}>
-                {make.VehicleTypeName}
+              <option key={make.MakeId} value={make.MakeId}>
+                {make.MakeName}
               </option>
             ))}
           </select>
