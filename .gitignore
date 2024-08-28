@@ -1,0 +1,42 @@
+# Node modules
+node_modules/
+
+# Log files
+*.log
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Build output
+.next/
+out/
+
+# Next.js cache
+.next/cache/
+
+# Vercel specific
+.vercel/
+
+# Dependency directories
+.pnp
+.pnp.js
+
+# TypeScript
+*.tsbuildinfo
+
+# IDE specific
+.vscode/
+.idea/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+dist/
+build/
+.vercel
