@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState, Suspense } from "react";
 
 export async function getStaticPaths() {
-  const makes = []; // Reemplazar con la lógica para obtener los ID de los fabricantes
+  const makes = []; 
   const currentYear = new Date().getFullYear();
   const years = Array.from({ length: currentYear - 2014 }, (_, i) => currentYear - i);
 
@@ -64,7 +64,7 @@ const ResultPage = ({ vehicles, makeId, year }) => {
 
 export default function Page(props) {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<p className="mt-24 text-center">Loading...</p>}>
       <ResultPage {...props} />
     </Suspense>
   );
